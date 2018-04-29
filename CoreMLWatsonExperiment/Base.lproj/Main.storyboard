@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IAD-GM-D4t">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreMLWatsonExperiment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotdogBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Kio-Vo-5Te" userLabel="Static Hotdog image">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="wc4-3M-T4Z"/>
+                                    <constraint firstAttribute="height" constant="128" id="y7F-Gp-qb4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3WU-A7-4S3" userLabel="User choosen image">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EiE-j6-BKy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="0bh-vT-f2L"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.83529411760000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3WU-A7-4S3" secondAttribute="trailing" id="6Ov-tP-bIG"/>
+                            <constraint firstItem="EiE-j6-BKy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AWz-MK-IbM"/>
+                            <constraint firstItem="EiE-j6-BKy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fyu-9I-DCo"/>
+                            <constraint firstItem="Kio-Vo-5Te" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GII-oq-uJZ"/>
+                            <constraint firstItem="Kio-Vo-5Te" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="I1P-Pd-qqT"/>
+                            <constraint firstItem="3WU-A7-4S3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NIc-an-zbQ"/>
+                            <constraint firstItem="3WU-A7-4S3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eG0-64-0I4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3WU-A7-4S3" secondAttribute="bottom" id="hJ0-T0-2kO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EiE-j6-BKy" secondAttribute="trailing" id="nkp-ia-GtZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M06-pC-Wiw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="xW6-vR-BIV">
+                            <connections>
+                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="VNa-Rh-bzx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraButton" destination="xW6-vR-BIV" id="LbB-zb-MNB"/>
+                        <outlet property="imageView" destination="3WU-A7-4S3" id="vF4-YN-EdF"/>
+                        <outlet property="topBarImageView" destination="EiE-j6-BKy" id="SPP-tk-7s3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hjt-Kc-eOU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IAD-GM-D4t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="10m-5O-jm3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1S0-n2-rnC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZq-Au-Jxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hotdogBackground" width="191" height="143"/>
+    </resources>
+</document>
